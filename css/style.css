@@ -12,15 +12,10 @@
   --border-line-color: #eeeeee;
 }
 
-/* ширина контейнера 1170px */
-/* паддинги контейнера слева и справа равны половине ширины gutter на макете (по 15px) */
-
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--primary-bg-color);
 }
-
-/* COMMON */
 
 h1,
 h2,
@@ -93,8 +88,6 @@ img {
   margin-bottom: 50px;
 }
 
-/* HEADER */
-
 .header {
   border-bottom: 1px solid var(--header-line-color);
 }
@@ -104,7 +97,7 @@ img {
   align-items: center;
 }
 
-.nav-wrapper {
+.nav {
   display: flex;
   align-items: center;
 }
@@ -166,8 +159,13 @@ img {
 .contacts .link:focus {
   color: var(--accent-color);
 }
-
-/* HERO */
+.contacts-icon {
+  margin-right: 10px;
+  fill: #757575;
+}
+.contacts-icon:hover {
+  fill: #2196f3;
+}
 
 .hero {
   background-color: #2f303a;
@@ -175,6 +173,8 @@ img {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: url('../images/index-images/hero.jpg');
+  background-size: cover;
 }
 
 .hero-title {
@@ -200,7 +200,6 @@ img {
   border: none;
 }
 
-/* FEATURES */
 .features-section {
   padding: 94px 0;
 }
@@ -227,15 +226,34 @@ img {
   display: flex;
 }
 
-.features-section .list-item {
-  width: calc((100%-90px) / 4);
-}
-
 .features-section .list-item:not(:last-child) {
   margin-right: 30px;
 }
+.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
 
-/* WHAT WE DO */
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
+.features-section .list-item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--secondary-bg-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
 
 .products-section {
   padding-bottom: 94px;
@@ -251,8 +269,6 @@ img {
 .products-item {
   margin: 15px;
 }
-
-/* TEAM */
 
 .team-section {
   background-color: var(--secondary-bg-color);
@@ -295,8 +311,53 @@ img {
   color: var(--secondary-txt-color);
   text-align: center;
 }
+.team-item-content .social-list-item {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+.team-item-content .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  fill: #afb1b8;
+}
+.team-item-content .social-list-item:hover,
+.team-item-content .social-list-item:focus {
+  background-color: #2196f3;
+  fill: #ffffff;
+  border-radius: 50%;
+}
+.clients-section {
+  padding: 94px 0;
+}
+.clients-section .list {
+  display: flex;
+}
+.clients-section .logo-item:not(:last-child) {
+  margin-right: 30px;
+}
+.logo-item {
+  width: 170px;
+  height: 90px;
+}
+.logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  fill: #afb1b8;
+}
+.logo-link:hover,
+.logo-link:focus {
+  border: 1px solid #2196f3;
+  color: #2196f3;
+}
 
-/* FOOTER */
 .footer {
   background-color: var(--additional-bg-color);
   padding-top: 60px;
@@ -309,6 +370,13 @@ img {
   margin-bottom: 20px;
   margin-right: 0;
   padding: 0;
+}
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+.footer-wrapper {
+  margin-right: 70px;
 }
 
 .footer-contacts {
@@ -343,8 +411,41 @@ img {
   display: flex;
   flex-direction: column;
 }
-
-/* PORTFOLIO */
+.join {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--additional-txt-color);
+  margin-top: 0;
+}
+.social-links {
+  display: flex;
+}
+.social-links .social-list-item {
+  width: 44px;
+  height: 44px;
+}
+.social-links .social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-links .social-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--additional-txt-color);
+  fill: currentColor;
+}
+.social-list-item .social-link:hover,
+.social-list-item .social-link:focus {
+  background-color: var(--accent-color);
+}
 
 .portfolio {
   padding: 94px 0 94px 0;
