@@ -333,7 +333,7 @@ img {
   fill: #afb1b8;
 }
 .team-item-content .social-link:hover,
-.team-item-content.social-link:focus {
+.team-item-content .social-link:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
   fill: var(--additional-txt-color);
