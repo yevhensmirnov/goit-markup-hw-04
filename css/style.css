@@ -123,13 +123,12 @@ img {
   text-decoration: none;
 }
 
+.site-nav .link.current,
 .site-nav .link:hover,
 .site-nav .link:focus,
-.site-nav .link:active {
-  color: var(--accent-color);
-}
-
-.site-nav .link.current {
+.site-nav .link:active,
+.contacts .link:hover,
+.contacts .link:focus {
   color: var(--accent-color);
 }
 
@@ -162,10 +161,11 @@ img {
 }
 .contacts-icon {
   margin-right: 10px;
-  fill: #757575;
+  align-self: center;
+  fill: currentColor;
 }
 .contacts-icon:hover {
-  fill: #2196f3;
+  fill: var(--accent-color);
 }
 
 .hero {
