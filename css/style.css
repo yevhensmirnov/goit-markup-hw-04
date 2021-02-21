@@ -360,6 +360,7 @@ img {
   border-radius: 4px;
   color: var(--icon-color);
   fill: currentColor;
+  border: 1px solid var(--icon-color);
 }
 .logo-link:hover,
 .logo-link:focus {
